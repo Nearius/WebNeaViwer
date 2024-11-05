@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ark Survival Ascended Fanpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Ark Survival Ascended</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="web.html">Inicio</a></li>
+            <li><a href="Dinos.html">Dinos</a></li>
+            <li><a href="DinoScan.html">DinoScan</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section id="Submenu">
+            
+            <p>Selecciona un mapa</p>
+            <div class="menu-mapa">
+                <button class="mapa-btn" data-section="island">The Island</button>
+                <button class="mapa-btn" data-section="scorched">Scorched Earth</button>
+                <button class="mapa-btn" data-section="center">The Center</button>
+                <button class="mapa-btn" data-section="aberration">Aberration</button>
+            </div>
+        </section>
+
+        <section id="tabla-contenido">
+            <div class="contenido-info-dinos">
+                <nav id="submenu-dinos-stats">
+                        <div class="menu-dinos-container">
+                        <div class="menu-dinos">
+                            <button class="menudinostamed" data-section="general">General</button>
+                            <button class="menudinostamed" data-section="stats">Stats</button>
+                            <button class="menudinostamed" data-section="colores">Colores</button>
+                            <button class="menudinostamed" data-section="ids">Ids</button>
+                        </div>
+                    </div>
+                    <button id="boton-filtro" class="boton-filtro">Filtro</button>
+                </nav>
+                <!-- Filtro de búsqueda para todas las tablas -->
+                <div id="filtro-tabla" class="filtro-tabla" style="display: none;">
+                    <input type="text" id="buscar" placeholder="Buscar en la tabla...">
+                </div>
+            </div>
+        
+            <div class="tabla-contenido" data-section="general">
+                <table>
+                    <colgroup>
+                        <col style="width: 120px;">
+                        <col style="width: 100px;">
+                        <col style="width: 350px;">
+                        <col style="width: 50px;">
+                        <col style="width: 60px;">
+                        <col style="width: 60px;">
+                        <col style="width: 60px;">
+                        <col style="width: 60px;">
+                        <col style="width: 20px;">
+                        <col style="width: 300px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>ID Tribu</th>
+                            <th>Nombre</th>
+                            <th>Especie</th>
+                            <th>stats</th>
+                            <th>LvL</th>
+                            <th>Género</th>
+                            <th>Lat</th>
+                            <th>Long</th>
+                            <th>Cryopod</th>
+                            <th>CCC</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filas de datos se agregarán dinámicamente aquí -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="modal-dino" class="modal">
+                <div class="modal-contenido">
+                    <span class="cerrar-modal">&times;</span>
+                    <h2>Información del Dino</h2>
+                    <div id="info-dino">
+                        <!-- Aquí se añadirá dinámicamente la información del dino -->
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Tabla Stats -->
+            <div class="tabla-contenido" data-section="stats" style="display: none;">
+                <table>
+                    <thead>
+                        <tr><th>Stats</th></tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr><td>Estadísticas...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- Tabla Colores -->
+            <div class="tabla-contenido" data-section="colores" style="display: none;">
+                <table>
+                    <colgroup>
+                        <col style="width: 120px;">
+                        <col style="width: 100px;">
+                        <col style="width: 350px;">
+                        <col style="width: 100px;">
+                        <col style="width: 60px;">
+                        <col style="width: 20px;">
+                        <col style="width: 20px;">
+                        <col style="width: 20px;">
+                        <col style="width: 20px;">
+                        <col style="width: 20px;">
+                    </colgroup>
+                    <thead>
+                        <th>ID Tribu</th>
+                        <th>Nombre</th>
+                        <th>Especie</th>
+                        <th>LvL</th>
+                        <th>Región 0</th>
+                        <th>Región 1</th>
+                        <th>Región 2</th>
+                        <th>Región 3</th>
+                        <th>Región 4</th>
+                        <th>Región 5</th>
+
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- Tabla IDs -->
+            <div class="tabla-contenido" data-section="ids" style="display: none;">
+                <table>
+                    <thead>
+                        <tr><th>IDs</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Identificadores...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        
+        </section>
+        
+        
+        <!-- Aquí añadirás más secciones -->
+    </main>
+    <footer>
+        <p>© 2024 Página de apoyo a la comunidad Arkuna Matata creado por Neita</p>
+    </footer>
+    <script type="module" src="data.js"></script>
+    <script type="module" src="ui.js"></script>
+    <script type="module" src="events.js"></script>
+</body>
+</html>

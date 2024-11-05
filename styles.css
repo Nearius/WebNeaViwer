@@ -1,0 +1,519 @@
+body {    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna */
+    background-color: #f9f8f4; /* Un fondo más claro y moderno */
+    color: #dfdada; /* Texto más oscuro para mejor contraste */
+}
+
+header, nav, section, footer {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para dar profundidad */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar de tema/color */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #444;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff; /* Asegura que el texto es claro contra el fondo oscuro */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ccc; /* Un gris más claro para el hover para mejorar la interactividad */
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+
+
+/* Estilos para tablets */
+@media (max-width: 768px) {
+    .menu-mapa {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .mapa-btn {
+        width: 45%; /* Hace los botones más pequeños para que quepan dos en una fila */
+    }
+
+    #Submenu, #tabla-contenido {
+        display: block; /* Cambia la disposición a bloque para apilar verticalmente */
+        width: 100%;
+    }
+}
+
+/* Estilos para teléfonos móviles */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Aumenta el espacio entre elementos del menú */
+    }
+
+    .mapa-btn {
+        width: 90%; /* Aumenta el ancho en dispositivos más pequeños para mejor accesibilidad */
+    }
+}
+
+.menu-mapa {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Alineación vertical de los elementos */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+
+
+.mapa-btn {
+    width: 250px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ddd;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 2.5s ease, background-image 2.5s ease; 
+}
+
+/* Estilos de selección para cada botón */
+.mapa-btn.seleccionado-1 {
+    color: #ddd;
+    background-color: #1f767c;
+    box-shadow: 0px 0px 16px rgba(255, 255, 255, 0.3); /* Sombra centrada alrededor del botón */
+    font-weight: bold;
+}
+
+.mapa-btn.seleccionado-2 {
+    color: #ddd;
+    background-color: #6b591f;
+    box-shadow: 0px 0px 16px rgba(255, 255, 255, 0.3); /* Sombra centrada alrededor del botón */
+    font-weight: bold;
+}
+
+.mapa-btn.seleccionado-3 {
+    color: #ddd;
+    background-color: #2a5025;
+    box-shadow: 0px 0px 16px rgba(255, 255, 255, 0.3); /* Sombra centrada alrededor del botón */
+    font-weight: bold;
+}
+
+.mapa-btn.seleccionado-4 {
+    color: #ddd;
+    background-color: #5a1f69;
+    box-shadow: 0px 0px 16px rgba(255, 255, 255, 0.3); /* Sombra centrada alrededor del botón */
+    font-weight: bold;
+}
+
+/* cada uno de los siguientes bloques hace referencia a un boton de cada mapa*/
+.mapa-btn:nth-child(1):hover {
+    color: #ddd; /* Cambia el color del texto al pasar el ratón */
+    background-color: #747474; /* Color de respaldo */
+    background-image: linear-gradient(50deg, #333, #3ef2ff); /* Degradado para el primer botón */
+}
+.mapa-btn:nth-child(2):hover {
+    color: #ddd; /* Cambia el color del texto al pasar el ratón */
+    background-color: #747474; /* Color de respaldo */
+    background-image: linear-gradient(50deg, #333, #ffd23e); /* Degradado para el primer botón */
+}
+.mapa-btn:nth-child(3):hover {
+    color: #ddd; /* Cambia el color del texto al pasar el ratón */
+    background-color: #747474; /* Color de respaldo */
+    background-image: linear-gradient(50deg, #333, #8bff7b); /* Degradado para el primer botón */
+}
+.mapa-btn:nth-child(4):hover {
+    color: #ddd; /* Cambia el color del texto al pasar el ratón */
+    background-color: #747474; /* Color de respaldo */
+    background-image: linear-gradient(50deg, #333, #d941ff); /* Degradado para el primer botón */
+}
+
+
+
+#Submenu, #tabla-contenido {
+    display: inline-block; /* Establece las secciones en línea */
+    vertical-align: top;
+    margin: 10px;
+}
+
+#Submenu{
+    width: 10%;
+}
+
+
+#Submenu p{
+    color: #ffe573;
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    
+}
+
+
+#tabla-contenido{
+    width: 70%;
+}
+
+
+#submenu-dinos-stats  {
+    list-style: none; 
+    display: flex; 
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* Estilo general para los botones */
+.menudinostamed {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, background-image 0.3s ease;
+}
+
+/* Hover general para todos los botones */
+.menudinostamed:hover {
+    background-color: #a58621;
+}
+
+/* Estilos de selección específicos para cada botón */
+.menudinostamed.seleccionado-1 {
+    color: #ddd;
+    background-color: #a58621;
+    box-shadow: 0px 0px 16px rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+}
+
+.menudinostamed.seleccionado-2 {
+    color: #ddd;
+    background-color: #1d6e83;
+    box-shadow: 0px 0px 16px rgba(255, 223, 63, 0.3);
+    font-weight: bold;
+}
+
+.menudinostamed.seleccionado-3 {
+    color: #ddd;
+    background-color: #3c7235;
+    box-shadow: 0px 0px 16px rgba(139, 255, 123, 0.3);
+    font-weight: bold;
+}
+
+.menudinostamed.seleccionado-4 {
+    color: #ddd;
+    background-color: #d941ff;
+    box-shadow: 0px 0px 16px rgba(217, 65, 255, 0.3);
+    font-weight: bold;
+}
+
+
+/* Estilos para la tabla */
+table {
+    margin: 15px auto;
+    border-collapse: collapse;
+    background-color: #f9f9f9; /* Fondo claro general */
+    border-radius: 8px;
+    overflow: hidden; /* Para redondear bordes */
+}
+
+/* Encabezados */
+thead th {
+    position: sticky;        /* Mantén el encabezado pegado en la parte superior */
+    top: 0;                  /* Fija el encabezado en la parte superior del contenedor */
+    background-color: #ff9f1c;  /* Color de fondo para el encabezado */
+    color: #fff;             /* Color del texto */
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px;
+    z-index: 10;             /* Asegura que el encabezado esté encima del contenido */
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4); /* Añade una sombra para distinguir el encabezado */
+}
+
+
+/* Celdas */
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    color:#222
+}
+
+/* Filas alternas */
+tbody tr:nth-child(even) {
+    background-color: #f1f1f1; /* Fondo claro */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+/* Hover para la fila completa */
+tbody tr:hover {
+    background-color: #ffcb77; /* Fondo de la fila en hover */
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover adicional para la celda individual */
+tbody td:hover {
+    background-color: #34fcfc71; /* Fondo de la celda en hover */
+    color: #222;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transición */
+}
+
+
+/* Efecto visual para la celda cuando ha sido copiada */
+td.copiado {
+    background-color: #55ebff !important; /* Color de fondo para indicar copiado */
+    color: #222;
+    transition: background-color 0.3s ease;
+}
+
+/* Desactiva el hover mientras se muestra el efecto de copiado */
+.no-hover td:hover {
+    background-color: inherit; /* Evita el cambio de color en hover */
+    color: inherit;
+}
+
+
+/* Contenedor de navegación con espacio entre los botones y el botón de filtro */
+#submenu-dinos-stats {
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    padding: 10px;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Contenedor centrado para los botones del menú */
+.menu-dinos-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos de los botones de navegación */
+.menu-dinos {
+    display: flex;
+    gap: 20px; /* Espacio entre los botones */
+}
+
+
+/* Botón de filtro a la derecha */
+.boton-filtro {
+    margin-left: auto; /* Empuja el botón a la derecha */
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #ff9f1c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-filtro:hover {
+    background-color: #ffcb77;
+}
+
+/* Barra de búsqueda */
+.filtro-tabla {
+    display: none; /* Oculta inicialmente */
+    margin-top: 10px;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+}
+.filtro-tabla.visible {
+    display: block;
+    opacity: 1;
+}
+
+#buscar {
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin: 0 auto; /* Centra el input de búsqueda */
+}
+
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    color:rgb(3, 39, 68);
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.modal-contenido {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.cerrar-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-stats {
+    background-color: #28a745; /* Verde */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-stats:hover {
+    background-color: #218838; /* Un verde un poco más oscuro */
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.stats-table th, .stats-table td {
+    border: 1px solid #0d9b9b;
+    padding: 8px;
+    text-align: center;
+}
+
+.stats-table th {
+    background-color: #75f4fd;
+    font-weight: bold;
+}
+
+.stats-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-contenido {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.cerrar-modal {
+    color: #fd1111;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.stats-table th, .stats-table td {
+    border: 1px solid #3dffe5;
+    padding: 8px;
+    text-align: center;
+}
+
+.stats-table th {
+    background-color: #2cb6b6;
+    font-weight: bold;
+}
+
+.stats-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.tabla-contenido {
+    max-height: 800px;       /* Limita la altura de la tabla */
+    overflow-y: auto;        /* Añade una barra de desplazamiento vertical */
+    margin-bottom: 20px;
+    padding: 10px;           /* Añade un poco de relleno */
+    position: relative;      /* Asegura que el sticky funcione dentro del contenedor relativo */
+}
+
+
+
+
