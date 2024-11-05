@@ -1,5 +1,5 @@
 // events.js
-// Este archivo será responsable de gestionar los eventos que ocurren en la página.
+// Este archivo será responsable de gestionar los eventos que ocurren en la página..
 
 import { cargarDatosMapa, datosMapaSeleccionado, actualizarTablaColores } from './data.js';
 import { mostrarModalDino, reAplicarEventos } from './ui.js';

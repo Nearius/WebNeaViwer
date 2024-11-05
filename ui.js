@@ -1,4 +1,4 @@
-// ui.js
+// ui.jss
 // Este archivo contendrá la lógica relacionada con la interfaz de usuario (mostrar tablas, modales, etc).
 
 export function mostrarModalDino(dino) {

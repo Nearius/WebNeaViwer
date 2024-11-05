@@ -5,7 +5,7 @@
 export let datosMapaSeleccionado = []; // Variable global para almacenar los datos del mapa seleccionado
 let config = {};
 
-// Obtener la configuración del backend
+// Obtener la configuración del backend s 
 async function cargarConfiguracion() {
     try {
         const response = await fetch('http://localhost:8885/api/config');
