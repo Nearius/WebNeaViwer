@@ -1,5 +1,5 @@
 body {    
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más modernmna */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna */
     background-color: #f9f8f4; /* Un fondo más claro y moderno */
     color: #dfdada; /* Texto más oscuro para mejor contraste */
 }
@@ -50,8 +50,6 @@ footer {
     background-color: #333;
 }
 
-
-
 /* Estilos para tablets */
 @media (max-width: 768px) {
     .menu-mapa {
@@ -90,12 +88,12 @@ footer {
     flex-direction: column; /* Organiza los elementos en una columna */
     align-items: center; /* Alineación vertical de los elementos */
     gap: 10px; /* Espacio entre los botones */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho posible */
 }
 
-
-
 .mapa-btn {
-    width: 250px;
+    width: 100%; /* Los botones se ajustan al ancho del contenedor */
+    max-width: 100%; /* Se asegura de que el botón no sobresalga del contenedor */
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -135,7 +133,7 @@ footer {
     font-weight: bold;
 }
 
-/* cada uno de los siguientes bloques hace referencia a un boton de cada mapa*/
+/* cada uno de los siguientes bloques hace referencia a un botón de cada mapa */
 .mapa-btn:nth-child(1):hover {
     color: #ddd; /* Cambia el color del texto al pasar el ratón */
     background-color: #747474; /* Color de respaldo */
@@ -144,20 +142,18 @@ footer {
 .mapa-btn:nth-child(2):hover {
     color: #ddd; /* Cambia el color del texto al pasar el ratón */
     background-color: #747474; /* Color de respaldo */
-    background-image: linear-gradient(50deg, #333, #ffd23e); /* Degradado para el primer botón */
+    background-image: linear-gradient(50deg, #333, #ffd23e); /* Degradado para el segundo botón */
 }
 .mapa-btn:nth-child(3):hover {
     color: #ddd; /* Cambia el color del texto al pasar el ratón */
     background-color: #747474; /* Color de respaldo */
-    background-image: linear-gradient(50deg, #333, #8bff7b); /* Degradado para el primer botón */
+    background-image: linear-gradient(50deg, #333, #8bff7b); /* Degradado para el tercer botón */
 }
 .mapa-btn:nth-child(4):hover {
     color: #ddd; /* Cambia el color del texto al pasar el ratón */
     background-color: #747474; /* Color de respaldo */
-    background-image: linear-gradient(50deg, #333, #d941ff); /* Degradado para el primer botón */
+    background-image: linear-gradient(50deg, #333, #d941ff); /* Degradado para el cuarto botón */
 }
-
-
 
 #Submenu, #tabla-contenido {
     display: inline-block; /* Establece las secciones en línea */
@@ -169,24 +165,11 @@ footer {
     width: 10%;
 }
 
-
-#Submenu p{
-    color: #ffe573;
-    font-size: 20px;
-    text-align: center;
-    font-style: italic;
-    font-weight: bold;
-    
-}
-
-
 #tabla-contenido{
     width: 70%;
-    
 }
 
-
-#submenu-dinos-stats  {
+#Submenu-dinos-stats {
     list-style: none; 
     display: flex; 
     gap: 20px; /* Espacio entre los elementos */
@@ -196,9 +179,6 @@ footer {
     font-weight: bold;
     position: relative;
 }
-
-
-
 
 /* Estilo general para los botones */
 .menudinostamed {
@@ -246,7 +226,6 @@ footer {
     font-weight: bold;
 }
 
-
 /* Estilos para la tabla */
 table {
     margin: 15px auto;
@@ -269,13 +248,12 @@ thead th {
     box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4); /* Añade una sombra para distinguir el encabezado */
 }
 
-
 /* Celdas */
 th, td {
     padding: 10px;
     border-bottom: 1px solid #ddd;
     text-align: center;
-    color:#222
+    color: #222;
 }
 
 /* Filas alternas */
@@ -301,22 +279,12 @@ tbody td:hover {
     transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transición */
 }
 
-
 /* Efecto visual para la celda cuando ha sido copiada */
 td.copiado {
-    background-color: #55ebff !important; /* Color de fondo para indicar copiado */
+    background-color: #55ebff; /* Color de fondo para indicar copiado */
     color: #222;
     transition: background-color 0.3s ease;
 }
-
-/* Desactiva el hover mientras se muestra el efecto de copiado */
-.no-hover td:hover {
-    background-color: inherit; /* Evita el cambio de color en hover */
-    color: inherit;
-}
-
-
-
 
 /* Contenedor centrado para los botones del menú */
 .menu-dinos-container {
@@ -330,7 +298,6 @@ td.copiado {
     display: flex;
     gap: 20px; /* Espacio entre los botones */
 }
-
 
 /* Botón de filtro a la derecha */
 .boton-filtro {
@@ -352,13 +319,12 @@ td.copiado {
 /* Barra de búsqueda */
 .filtro-tabla {
     display: none; /* Oculta inicialmente */
-    margin-top: 10px;
+    margin-top: 30px;
     text-align: center;
     transition: opacity 0.3s ease-in-out;
 }
 .filtro-tabla.visible {
     display: block;
-    opacity: 1;
 }
 
 #buscar {
@@ -371,13 +337,12 @@ td.copiado {
     margin: 0 auto; /* Centra el input de búsqueda */
 }
 
-
 .modal {
     display: none;
     align-items: center;
     justify-content: center;
     position: fixed;
-    color:rgb(3, 39, 68);
+    color: rgb(3, 39, 68);
     left: 0;
     top: 0;
     width: 100%;
@@ -385,7 +350,6 @@ td.copiado {
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1000;
 }
-
 
 .modal-contenido {
     background-color: #fefefe;
@@ -397,10 +361,8 @@ td.copiado {
     border-radius: 8px;
 }
 
-
-
 .cerrar-modal {
-    color: #aaa;
+    color: #000000;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -408,7 +370,7 @@ td.copiado {
 
 .cerrar-modal:hover,
 .cerrar-modal:focus {
-    color: black;
+    color: rgb(255, 0, 0);
     text-decoration: none;
     cursor: pointer;
 }
@@ -427,70 +389,11 @@ td.copiado {
     background-color: #218838; /* Un verde un poco más oscuro */
 }
 
-.stats-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.stats-table th, .stats-table td {
-    border: 1px solid #0d9b9b;
-    padding: 8px;
-    text-align: center;
-}
-
-.stats-table th {
-    background-color: #75f4fd;
-    font-weight: bold;
-}
-
-.stats-table tr:hover {
-    background-color: #f1f1f1;
-}
-
-
-
-.cerrar-modal {
-    color: #fd1111;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.cerrar-modal:hover,
-.cerrar-modal:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.stats-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.stats-table th, .stats-table td {
-    border: 1px solid #3dffe5;
-    padding: 8px;
-    text-align: center;
-}
-
-.stats-table th {
-    background-color: #2cb6b6;
-    font-weight: bold;
-}
-
-.stats-table tr:hover {
-    background-color: #f1f1f1;
-}
-
 .tabla-contenido {
     max-height: 800px;       /* Limita la altura de la tabla */
     overflow-y: auto;        /* Añade una barra de desplazamiento vertical */
     margin-bottom: 20px;
     padding: 10px;           /* Añade un poco de relleno */
-    position: relative;      /* Asegura que el sticky funcione dentro del contenedor relativo */
 }
 
 
