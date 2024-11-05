@@ -190,9 +190,13 @@ footer {
     list-style: none; 
     display: flex; 
     gap: 20px; /* Espacio entre los elementos */
-    padding: 0;
     margin: 0;
+    background-color: #444;
+    padding: 10px;
+    font-weight: bold;
+    position: relative;
 }
+
 
 
 
@@ -312,15 +316,7 @@ td.copiado {
 }
 
 
-/* Contenedor de navegación con espacio entre los botones y el botón de filtro */
-#submenu-dinos-stats {
-    display: flex;
-    align-items: center;
-    background-color: #444;
-    padding: 10px;
-    font-weight: bold;
-    position: relative;
-}
+
 
 /* Contenedor centrado para los botones del menú */
 .menu-dinos-container {
